@@ -203,31 +203,6 @@ button {
   width: 64px;
   height: 64px;
 }
-/* .factors-list-item::before {
-  display: block;
-  content: "";
-  height: 112px;
-  padding: 24px 100px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #f4f4fd;
-  border-radius: 4px;
-  margin-bottom: 8px;
-}
-.icon-antenna::before {
-  background-image: url("../../images/antenna.svg");
-}
-.icon-clock::before {
-  background-image: url("../../images/clock.svg");
-}
-.icon-diagram::before {
-  background-image: url("../../images/diagram.svg");
-}
-.icon-astronaut::before {
-  background-image: url("../../images/astronaut.svg");
-} */
-
 .success-factors-title,
 .team-item-title,
 .card-title {
@@ -299,11 +274,6 @@ button {
   border-radius: 50%;
   background: var(--iris-color);
 }
-.social-list-icon:hover,
-.social-list-icon:focus {
-  background: var(--active-color);
-}
-
 .social-list-icon {
   width: 100%;
   height: 100%;
@@ -311,6 +281,11 @@ button {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-list-icon:hover,
+.social-list-icon:focus {
+  background-color: var(--active-color);
 }
 
 .customers {
@@ -341,13 +316,19 @@ button {
   border: 1px solid #8e8f99;
   border-radius: 4px;
   fill: #8e8f99;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customer-item:hover,
 .customer-item:focus {
   border: 1px solid var(--active-color);
+}
+.customer-item:hover .customer-icon,
+.customer-item:focus .customer-icon {
   fill: var(--active-color);
 }
+
 .customer-icon {
   width: 104px;
   height: 56px;
@@ -380,17 +361,16 @@ button {
   margin-bottom: 16px;
 }
 .social-list-icon-footer {
-  /* width: 24px;
-  height: 24px; */
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .bg-footer {
-  background: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 .social-list-icon-footer:hover,
 .social-list-icon-footer:focus {
